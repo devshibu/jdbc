@@ -1,0 +1,37 @@
+1. Create a database 'peoplentech' and table 'students' in mysql database server
+Run MySQL Command Line Client
+
+
+SQL command to create database 'peoplentech':
+create database peoplentech;
+
+SQL Command to open database 'peoplentech'
+use peoplentech;
+
+SQL Command to create table 'students'
+create table students(id varchar(10), firstname varchar(15), lastname varchar(15),
+phone varchar(20), email varchar(20), username varchar(15), password varchar(15));
+
+SQL command for inserting data into table 'students':
+insert into students values('1234NY', 'Shibu', 'Dev', '1234567890', 'shibudev@gmail.com', 'shibu123', 'dev123');
+
+Note: make sure number value will be without quote, string value with single quote
+
+SQL command to display all data from table 'students'
+select * from students;
+
+SQL command to display specific data like students' first name, phone number and email address:
+select fname, phone, email from students;
+
+SQL command to display specific information for specific student like email address of student whose id = '1234NY':
+select email from students where id = '1234NY'
+
+(
+SQL command to update data like update phone number of student '1234NY'
+update students set phone = 3475557777 where id = '1234NY';
+
+SQL command for delete all information of student whose id = '1234NY'
+delete from students where id = '1234NY';
+)
+
+2. Add mysql-connector-java-x.x.xx-bin.jar and selenium-server-standalone-x.xx.x.jar to project library
